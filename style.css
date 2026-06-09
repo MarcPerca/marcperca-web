@@ -460,6 +460,7 @@ h1 {
     .portrait-wrap {
         width: min(280px, 100%);
         justify-self: center;
+        margin-inline: auto;
     }
 
     h1 {
@@ -483,10 +484,15 @@ h1 {
     }
 
     .contact {
+        width: 100%;
         gap: 10px 18px;
         font-size: 14px;
         justify-content: center;
         text-align: center;
+    }
+
+    .contact a {
+        display: inline-block;
     }
 
     .work-inner {
@@ -571,6 +577,7 @@ h1 {
 
     .portrait-wrap {
         width: min(240px, 100%);
+        margin-inline: auto;
     }
 
     .work-experience h2,
