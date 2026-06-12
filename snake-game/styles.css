@@ -293,6 +293,31 @@ button {
   transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
+.site-header .nav-trigger {
+  appearance: none;
+  background: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
+  color: #a7a7ac;
+  cursor: default;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 34px;
+  padding: 0 13px;
+  text-transform: none;
+  transform: none;
+}
+
+.site-header .nav-menu:hover .nav-trigger,
+.site-header .nav-trigger:hover,
+.site-header .nav-trigger:focus-visible {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 0 34px rgba(120, 140, 255, 0.24);
+  color: #f5f5f5;
+  outline: none;
+  transform: none;
+}
+
 #play {
   border-color: rgba(244, 185, 66, 0.72);
   box-shadow:

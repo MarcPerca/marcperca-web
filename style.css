@@ -140,6 +140,13 @@ a {
     transition: color 0.18s ease, border-color 0.18s ease, background 0.18s ease;
 }
 
+.nav-trigger {
+    appearance: none;
+    background: transparent;
+    cursor: default;
+    font-family: inherit;
+}
+
 .nav-menu:hover .nav-link,
 .nav-link:hover {
     border-color: rgba(255, 255, 255, 0.28);

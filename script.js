@@ -151,5 +151,40 @@ window.addEventListener("mouseleave", () => {
     mouse.active = false;
 });
 
+function cleanHashUrl() {
+    history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+}
+
+function scrollToHashTarget(hash) {
+    const target = document.querySelector(hash);
+    if (!target) return false;
+
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    window.setTimeout(cleanHashUrl, 180);
+    return true;
+}
+
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener("click", (event) => {
+        const hash = link.getAttribute("href");
+        if (!hash || hash === "#") {
+            event.preventDefault();
+            cleanHashUrl();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            return;
+        }
+
+        if (scrollToHashTarget(hash)) {
+            event.preventDefault();
+        }
+    });
+});
+
+window.addEventListener("load", () => {
+    if (window.location.hash) {
+        window.setTimeout(() => scrollToHashTarget(window.location.hash), 0);
+    }
+});
+
 resize();
 requestAnimationFrame(animate);
