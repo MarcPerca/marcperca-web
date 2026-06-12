@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Snake</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="matrixRain" aria-hidden="true"></canvas>
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Main navigation">
+      <a class="brand" href="../index.html">Marc Perca</a>
+      <div class="nav-links">
+        <a class="nav-link" href="../index.html#experience">Work Experience</a>
+        <div class="nav-menu">
+          <a class="nav-link" href="../index.html#knowledge">Knowledge</a>
+          <div class="dropdown" aria-label="Knowledge sections">
+            <a href="../index.html#it-support">IT Systems Technician</a>
+            <a href="../index.html#programming">Programming</a>
+          </div>
+        </div>
+        <div class="nav-menu">
+          <a class="nav-link" href="index.html" aria-current="page">Extra</a>
+          <div class="dropdown" aria-label="Extra sections">
+            <a href="index.html">Snake Game</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="topbar">
+      <div>
+        <h1>Snake Game</h1>
+      </div>
+      <div class="hud" aria-live="polite">
+        <div class="hud-item">
+          <span>Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="hud-item">
+          <span>Best</span>
+          <strong id="best">0</strong>
+        </div>
+      </div>
+    </div>
+
+    <section class="game-shell" aria-label="Snake game">
+      <div class="board-wrap">
+        <canvas id="board" width="600" height="600" aria-label="Game board"></canvas>
+        <div class="overlay visible" id="overlay">
+          <div class="message">
+            <h2 id="gameOverTitle" class="game-over-title" hidden>Game Over</h2>
+            <button id="play" class="start-button">Start</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="touch-pad" aria-label="Touch controls">
+        <button class="up" type="button" data-dir="up" aria-label="Up">UP</button>
+        <button class="left" type="button" data-dir="left" aria-label="Left">LEFT</button>
+        <button class="down" type="button" data-dir="down" aria-label="Down">DOWN</button>
+        <button class="right" type="button" data-dir="right" aria-label="Right">RIGHT</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
