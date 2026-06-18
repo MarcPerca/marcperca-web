@@ -415,6 +415,11 @@ h1 {
     object-fit: contain;
 }
 
+.skill-logo-compact {
+    width: 28px;
+    height: 28px;
+}
+
 .skill-grid strong {
     display: block;
     margin-bottom: 3px;
@@ -618,6 +623,11 @@ h1 {
     .skill-logo {
         width: 30px;
         height: 30px;
+    }
+
+    .skill-logo-compact {
+        width: 26px;
+        height: 26px;
     }
 
     .skill-grid strong {
